@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class PlayerController : MonoBehaviour
@@ -12,7 +13,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private PlayerControls playerControls;
     private Animator animator;
-
     
 
     #region ScriptableObject
@@ -44,7 +44,6 @@ public class PlayerController : MonoBehaviour
         // ItemWorld.SpawnItemWorld(new Vector3(0,2), new Item {itemScriptableObject = itemSO_Medkit, amount =1});
         // ItemWorld.SpawnItemWorld(new Vector3(0,3), new Item {itemType = Item.ItemType.Medkit, amount =1});
     }
-
 
 
     private void UseItem(Item item) {
