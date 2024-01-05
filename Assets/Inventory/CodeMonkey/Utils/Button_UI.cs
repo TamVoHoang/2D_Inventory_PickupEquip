@@ -26,6 +26,7 @@ namespace CodeMonkey.Utils {
     public class Button_UI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler {
 
         public Action ClickFunc = null;
+        public Action DoubleClickFunc = null; //?
         public Action MouseRightClickFunc = null;
         public Action MouseMiddleClickFunc = null;
         public Action MouseDownOnceFunc = null;
@@ -57,8 +58,11 @@ namespace CodeMonkey.Utils {
         public bool triggerMouseOutFuncOnClick = false;
         private bool mouseOver;
         private float mouseOverPerSecFuncTimer;
-
         private Action internalOnPointerEnterFunc, internalOnPointerExitFunc, internalOnPointerClickFunc;
+
+        //? test double Touch
+        
+        //? test double Touch
 
 #if SOUND_MANAGER
         public Sound_Manager.Sound mouseOverSound, mouseClickSound;
@@ -98,7 +102,12 @@ namespace CodeMonkey.Utils {
                 if (MouseRightClickFunc != null) MouseRightClickFunc();
             if (eventData.button == PointerEventData.InputButton.Middle)
                 if (MouseMiddleClickFunc != null) MouseMiddleClickFunc();
+
+            //? test double Touch
+            
+            //? test double Touch
         }
+
         public void Manual_OnPointerExit() {
             OnPointerExit(null);
         }
@@ -122,6 +131,7 @@ namespace CodeMonkey.Utils {
                 }
             }
             if (MouseUpdate != null) MouseUpdate();
+
 
         }
         void Awake() {

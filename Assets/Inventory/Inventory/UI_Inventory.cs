@@ -85,9 +85,10 @@ public class UI_Inventory : MonoBehaviour
                 inventory.RemoveItem(item);
                 ItemWorld.DropItem(playerController.GetPosition(),duplicateItem);
             };
+            
 
             //? xet vi tri cho o vat pham UI
-            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, -y * itemSlotCellSize);
+            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, - y * itemSlotCellSize);
 
             //? thay doi hinh anh hien thi cua tung o vat pham 
             //Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
