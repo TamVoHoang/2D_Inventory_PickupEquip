@@ -19,6 +19,7 @@ public class TestCommit : MonoBehaviour
         Debug.Log("test commit 1");
         Debug.Log("test commit 2");
         Debug.Log("test commit 3 phuc");
+        Debug.Log("test commit 4 phuc pull request");
 
     }
 }
